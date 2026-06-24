@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://r1imghtlak.mmtcdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://images.openai.com https://www.google.com https://www.google.co.in https://maps.gstatic.com https://maps.googleapis.com; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https://wa.me;">
+  <link rel="canonical" href="https://www.hoteladvantageinn.com/suites.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#104152">
+  <title>Luxury Rooms & Suites in Civil Lines Prayagraj | Advantage Inn</title>
+  <meta name="description" content="Book premium Deluxe Rooms, Executive Rooms, and Super Deluxe Rooms at Hotel Advantage Inn, Civil Lines, Prayagraj. Enjoy top-tier luxury amenities near Junction.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  
+  <!-- Google Fonts & FontAwesome (Deferred/Non-blocking for PageSpeed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  
+  <style>
+    /* Cinematic Parallax Hero Overlay for Subpages */
+    .subpage-hero {
+      height: 60vh;
+      min-height: 380px;
+      position: relative;
+      background: linear-gradient(rgba(16, 65, 82, 0.55), rgba(16, 65, 82, 0.55)), url('https://r1imghtlak.mmtcdn.com/49939acf-d587-4006-95a4-853fdbe36f70.jpg?&output-quality=75') center/cover no-repeat fixed;
+      box-shadow: inset 0 -120px 100px -100px rgba(30,25,22,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFFFFF;
+      background-blend-mode: multiply;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    
+    .subpage-hero h1 {
+      font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+      font-weight: 300;
+      color: #FAF9F5;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(197, 168, 128, 0.25);
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+    }
+    
+    .subpage-hero p {
+      font-family: var(--font-btn);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: var(--color-gold);
+      margin-bottom: 0.8rem;
+    }
+    
+    /* Suites Showcase List Grid */
+    .suites-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding: 5rem 0;
+    }
+    
+    .suite-card-premium {
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+      border: 1px solid rgba(197, 168, 128, 0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .suite-card-premium:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(197, 168, 128, 0.08);
+    }
+    
+    .suite-img-wrap {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      background: #104152;
+    }
+    
+    .suite-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: block;
+    }
+    
+    .suite-card-premium:hover .suite-img-wrap img {
+      transform: scale(1.05);
+    }
+    
+    .suite-details-wrap {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .suite-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-gold-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 0.8rem;
+    }
+    
+    .suite-title {
+      font-family: var(--font-display), serif;
+      font-size: 2.2rem;
+      color: var(--color-crimson);
+      margin-bottom: 1rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    .suite-description {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1.8rem;
+    }
+    
+    .suite-amenities-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin-bottom: 2.2rem;
+      list-style: none;
+      padding: 0;
+      border-top: 1px solid rgba(197, 168, 128, 0.15);
+      padding-top: 1.5rem;
+    }
+    
+    .suite-amenities-list li {
+      font-size: 0.82rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .suite-amenities-list li i {
+      color: var(--color-gold-dark);
+      font-size: 0.85rem;
+    }
+    
+    /* Desktop Responsive Split Row */
+    @media(min-width: 900px) {
+      .suite-card-premium {
+        flex-direction: row;
+        min-height: 480px;
+      }
+      
+      .suite-card-premium:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      
+      .suite-img-wrap {
+        width: 50%;
+        height: auto;
+        min-height: 480px;
+      }
+      
+      .suite-details-wrap {
+        width: 50%;
+        padding: 4rem;
+      }
+    }
+    
+    /* Mobile-first overrides */
+    @media(max-width: 768px) {
+      .suites-grid {
+        padding: 2rem 0;
+        gap: 2.5rem;
+      }
+      
+      .suite-card-premium {
+        border-radius: 12px;
+      }
+      
+      .suite-img-wrap {
+        height: 230px;
+      }
+      
+      .suite-details-wrap {
+        padding: 1.5rem !important;
+      }
+      
+      .suite-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.6rem !important;
+      }
+      
+      .suite-description {
+        font-size: 0.82rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 1.2rem !important;
+      }
+      
+      .suite-amenities-list {
+        gap: 0.8rem 1.2rem !important;
+        margin-bottom: 1.8rem !important;
+        padding-top: 1.2rem !important;
+      }
+      
+      .suite-amenities-list li {
+        font-size: 0.76rem !important;
+      }
+      
+      .suite-actions-row {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+      }
+      
+      .suite-actions-row .btn {
+        width: 100% !important;
+        margin: 0 !important;
+        min-height: 40px !important;
+        height: 40px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 0.8rem !important;
+      }
+    }
+  </style>
+  
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.hoteladvantageinn.com/#organization",
+    "name": "Hotel Advantage Inn Prayagraj",
+    "url": "https://www.hoteladvantageinn.com/",
+    "logo": "https://www.hoteladvantageinn.com/logo.webp",
+    "sameAs": [
+      "https://www.facebook.com/hoteladvantageinn",
+      "https://www.instagram.com/hoteladvantageinn"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": [
+      "Hotel",
+      "LocalBusiness"
+    ],
+    "@id": "https://www.hoteladvantageinn.com/#hotel",
+    "name": "Hotel Advantage Inn Prayagraj",
+    "description": "Smart luxury boutique hotel in Civil Lines, Prayagraj. Enjoy seamless luxury accommodations with high-speed Wi-Fi, elegant rooms, and rate parity guarantees near Prayagraj Junction.",
+    "url": "https://www.hoteladvantageinn.com/",
+    "logo": "https://www.hoteladvantageinn.com/logo.webp",
+    "image": "https://www.hoteladvantageinn.com/hotel_front.webp",
+    "telephone": "+91-7267907111",
+    "priceRange": "INR 2499 - 7499",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
+    "starRating": {
+      "@type": "Rating",
+      "ratingValue": "4.8",
+      "bestRating": "5"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1-A, Loyal Road, (Patrika Marg), Behind BSNL Office, Civil Lines",
+      "addressLocality": "Prayagraj",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "211001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.4542",
+      "longitude": "81.8340"
+    },
+    "sameAs": [
+      "https://www.facebook.com/hoteladvantageinn",
+      "https://www.instagram.com/hoteladvantageinn",
+      "https://www.tripadvisor.com/Hotel_Review-g297684-d25439401-Reviews-Hotel_Advantage_Inn-Prayagraj_Allahabad_District_Uttar_Pradesh.html",
+      "https://www.booking.com/hotel/in/advantage-inn-prayagraj.html",
+      "https://www.makemytrip.com/hotels/hotel_advantage_inn-details-prayagraj.html"
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "@id": "https://www.hoteladvantageinn.com/#organization"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free High-Speed Fiber Wi-Fi",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Multi-Cuisine Dining at Golden Leaf",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Secured Private Parking",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Elevator Access",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "24/7 Security",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.hoteladvantageinn.com/suites.html#webpage",
+    "url": "https://www.hoteladvantageinn.com/suites.html",
+    "name": "Luxury Rooms & Suites in Prayagraj | Advantage Inn",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.hoteladvantageinn.com/#website"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.hoteladvantageinn.com/suites.html#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.hoteladvantageinn.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Suites & Rooms",
+        "item": "https://www.hoteladvantageinn.com/suites.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://www.hoteladvantageinn.com/suites.html#itemlist",
+    "name": "Hotel Rooms and Suites Inventory",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://www.hoteladvantageinn.com/room-standard.html",
+        "name": "Deluxe Room"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://www.hoteladvantageinn.com/room-premium.html",
+        "name": "Executive Room"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://www.hoteladvantageinn.com/room-family.html",
+        "name": "Super Deluxe Room"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What room categories are available at Hotel Advantage Inn Prayagraj?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer three elegantly designed luxury room tiers: Deluxe Room (entry-tier smart comfort, King Bed, 130 sq ft), Executive Room (spacious boutique layouts with in-room coffee setups, organic toiletries, 190 sq ft), and Super Deluxe Room (family-friendly setups with King + Sofa bed, 160 sq ft)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do all rooms at Hotel Advantage Inn include air conditioning and hot water geysers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all our rooms feature individually controlled air conditioning, high-speed optical fiber Wi-Fi, flat-screen smart TVs, and pristine Western sanitary bathrooms with electric geysers supplying instant hot water."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the standard check-in and check-out times at Hotel Advantage Inn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard check-in is at 12:00 PM and check-out is at 11:00 AM. Direct bookings made on our official website unlock early check-in and late check-out privileges, subject to availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is room service and in-room dining available for guests?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, 24/7 room service and in-room dining from our in-house Golden Leaf Restaurant (serving pure vegetarian Mughlai, Awadhi, and multi-cuisine dishes) are available for all room guests."
+        }
+      }
+    ]
+  }
+]
+</script>
+
+  <!-- Search Engine, Social Share & AI Browser Preview Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hoteladvantageinn.com/suites.html">
+  <meta property="og:title" content="Luxury Rooms & Suites in Civil Lines Prayagraj | Advantage Inn">
+  <meta property="og:description" content="Book premium Deluxe Rooms, Executive Rooms, and Super Deluxe Rooms at Hotel Advantage Inn, Civil Lines, Prayagraj. Enjoy top-tier luxury amenities near Junction.">
+  <meta property="og:image" content="https://www.hoteladvantageinn.com/room_executive.webp">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.hoteladvantageinn.com/suites.html">
+  <meta property="twitter:title" content="Luxury Rooms & Suites in Civil Lines Prayagraj | Advantage Inn">
+  <meta property="twitter:description" content="Book premium Deluxe Rooms, Executive Rooms, and Super Deluxe Rooms at Hotel Advantage Inn, Civil Lines, Prayagraj. Enjoy top-tier luxury amenities near Junction.">
+  <meta property="twitter:image" content="https://www.hoteladvantageinn.com/room_executive.webp">
+</head>
+<body style="background-color: #FAF9F5; overflow-x: hidden;">
+
+  <header class="sticky-nav scrolled" style="position: fixed; background: var(--bg-glass-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon-wrapper" style="background: #104152; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-gold-bright); box-shadow: var(--shadow-glass);">
+          <img src="./logo_crest.webp" alt="Hotel Advantage Inn Logo" style="height: 32px; width: 32px; object-fit: contain;" width="331" height="330" loading="eager">
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title" style="color: #FFFFFF;">Advantage Inn</span>
+          <span class="logo-subtitle" style="color: var(--color-gold);">Civil Lines Prayagraj</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Home</a></li>
+          <li><a href="suites.html" class="nav-link active" style="color: var(--color-gold);">Suites & Rooms</a></li>
+          <li><a href="dining.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Dining</a></li>
+          <li><a href="banquets.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Banquets</a></li>
+          <li><a href="index.html#contact" class="nav-link" style="color: rgba(255,255,255,0.85);">Location</a></li>
+          <li><a href="index.html#suites" class="btn btn-primary" style="padding: 0.5rem 1.6rem; font-size: 0.68rem; border-radius: 50px;">Book Direct</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggler" aria-label="Toggle Menu" style="background: none; border: none; color: var(--color-gold); font-size: 1.4rem; cursor: pointer;">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- RESPONSIVE MOBILE BRAND DRAWER (INSTANT BOOKINGS CTA) -->
+  <div class="mobile-drawer">
+    <button class="close-btn" aria-label="Close Drawer Navigation"><i class="fa-solid fa-xmark"></i></button>
+    <div class="drawer-logo">
+      <div class="logo-icon-wrapper" style="background-color: #104152;">
+        <img src="./logo_crest.webp" alt="Royal Brand Crest Emblem Icon" width="331" height="330" loading="eager">
+      </div>
+      <span class="logo-title">Advantage Inn</span>
+      <span class="logo-subtitle">Civil Lines Prayagraj</span>
+    </div>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="suites.html" class="active">Suites & Rooms</a></li>
+      <li><a href="dining.html">Gourmet Dining</a></li>
+      <li><a href="banquets.html">Advanta Banquets</a></li>
+      <li><a href="index.html#contact">Location & Directions</a></li>
+    </ul>
+    <a href="index.html#suites" class="btn btn-secondary" style="margin-top: 2rem; width: 100%;">Reserve Direct & Save</a>
+  </div>
+
+  <!-- HERO SECTION WITH PARALLAX & VIGNETTES -->
+  <section class="subpage-hero">
+    <div class="container reveal-fade-up active">
+      <p>Bespoke Accommodations</p>
+      <h1>Luxury Rooms & Suites in Prayagraj</h1>
+    </div>
+  </section>
+
+  <!-- SUITES SHOWCASE GRID -->
+  <section class="container" style="padding: 2rem 1rem;">
+    <div class="suites-grid">
+      
+      <!-- Deluxe Room -->
+      <div class="suite-card-premium reveal-fade-up">
+        <div class="suite-img-wrap">
+          <img src="https://r1imghtlak.mmtcdn.com/49939acf-d587-4006-95a4-853fdbe36f70.jpg?&output-quality=75" alt="Deluxe Room Bedding" loading="lazy">
+        </div>
+        <div class="suite-details-wrap">
+          <span class="suite-badge"><i class="fa-solid fa-circle-check"></i> Entry Premium Tier</span>
+          <h2 class="suite-title">Deluxe Room</h2>
+          <p class="suite-description">
+            Cozy boutique layouts featuring a premium double orthopaedic King-size bed, full individual air conditioning control, complimentary optical fiber high-speed Wi-Fi, flat-screen satellite TV, multi-socket study desk, and pristine Western sanitary geyser bathroom. Ideal for business transit and pilgrim couples.
+          </p>
+          <ul class="suite-amenities-list">
+            <li><i class="fa-solid fa-expand"></i> 130 SQ FT</li>
+            <li><i class="fa-solid fa-bed"></i> King Bed</li>
+            <li><i class="fa-solid fa-wifi"></i> Fiber Wi-Fi</li>
+            <li><i class="fa-solid fa-snowflake"></i> Air Conditioning</li>
+            <li><i class="fa-solid fa-temperature-high"></i> Western Geyser</li>
+          </ul>
+          <div class="suite-actions-row" style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
+            <a href="index.html#suites" class="btn btn-primary">Book From ₹2,499</a>
+            <a href="room-standard.html" class="btn btn-outline" style="border-color: var(--color-crimson); color: var(--color-crimson); padding: 0.6rem 1.5rem; font-size: 0.8rem; border-radius: 4px;">View Details <i class="fa-solid fa-arrow-right-long" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Room -->
+      <div class="suite-card-premium reveal-fade-up">
+        <div class="suite-img-wrap">
+          <img src="https://r1imghtlak.mmtcdn.com/6f99a236-1cad-48f1-8bfc-bc3b85d8e39a.jpg?&output-quality=75" alt="Executive Room Cozy Bed Layout" loading="lazy">
+        </div>
+        <div class="suite-details-wrap">
+          <span class="suite-badge"><i class="fa-solid fa-star"></i> Elite Executive Choice</span>
+          <h2 class="suite-title">Executive Room</h2>
+          <p class="suite-description">
+            Spacious executive suites featuring high-end organic bath cosmetics, direct in-room electric kettles with coffee setups, dedicated workspaces, flat-screen smart TVs, and round-the-clock room service. The ultimate comfort for business leaders, judges, and corporate advocates visiting Civil Lines.
+          </p>
+          <ul class="suite-amenities-list">
+            <li><i class="fa-solid fa-expand"></i> 190 SQ FT</li>
+            <li><i class="fa-solid fa-bed"></i> King Size Ortho</li>
+            <li><i class="fa-solid fa-mug-hot"></i> Electric Kettle</li>
+            <li><i class="fa-solid fa-pump-soap"></i> Organic Cosmetics</li>
+            <li><i class="fa-solid fa-bell"></i> 24/7 Service</li>
+          </ul>
+          <div class="suite-actions-row" style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
+            <a href="index.html#suites" class="btn btn-primary">Book From ₹3,499</a>
+            <a href="room-premium.html" class="btn btn-outline" style="border-color: var(--color-crimson); color: var(--color-crimson); padding: 0.6rem 1.5rem; font-size: 0.8rem; border-radius: 4px;">View Details <i class="fa-solid fa-arrow-right-long" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Super Deluxe Room -->
+      <div class="suite-card-premium reveal-fade-up">
+        <div class="suite-img-wrap">
+          <img src="https://r1imghtlak.mmtcdn.com/1e05750a-98a4-4d54-ab28-f6dff7b84328.jpg?&output-quality=75" alt="Super Deluxe Room Spacious Room Setup" loading="lazy">
+        </div>
+        <div class="suite-details-wrap">
+          <span class="suite-badge"><i class="fa-solid fa-users"></i> Perfect for Groups & Pilgrims</span>
+          <h2 class="suite-title">Super Deluxe Room</h2>
+          <p class="suite-description">
+            Expansive lounge-style layouts designed with families in mind. Features elegant double wardrobes, street views of Civil Lines, customized beverage modules, and an integrated comfortable sofa-lounge. Located minutes away from the railway station and providing immediate car booking to Triveni Sangam.
+          </p>
+          <ul class="suite-amenities-list">
+            <li><i class="fa-solid fa-expand"></i> 160 SQ FT</li>
+            <li><i class="fa-solid fa-couch"></i> Sofa Lounge</li>
+            <li><i class="fa-solid fa-user-group"></i> Up to 4 Guests</li>
+            <li><i class="fa-solid fa-compass"></i> Sangam Guide</li>
+          </ul>
+          <div class="suite-actions-row" style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
+            <a href="index.html#suites" class="btn btn-primary">Book From ₹4,049</a>
+            <a href="room-family.html" class="btn btn-outline" style="border-color: var(--color-crimson); color: var(--color-crimson); padding: 0.6rem 1.5rem; font-size: 0.8rem; border-radius: 4px;">View Details <i class="fa-solid fa-arrow-right-long" style="margin-left: 8px;"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION SECTION -->
+  <section class="section" id="faqs" style="background: var(--gradient-cream-lite); padding: 4rem 0;">
+    <div class="container">
+      <div class="section-head reveal-fade-up">
+        <span class="section-subtitle">FAQ Desk</span>
+        <h2 class="section-title">Rooms & Suites FAQs</h2>
+        <p>Common questions regarding our luxury accommodations and services in Civil Lines.</p>
+        <div class="accent-line"></div>
+      </div>
+
+      <div class="faq-accordion" style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>What room categories are available at Hotel Advantage Inn Prayagraj?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We offer three elegantly designed luxury room tiers:
+              <ul style="margin-top: 0.8rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li><strong>Deluxe Room:</strong> Entry-tier smart double comfort (King Bed, 130 sq ft).</li>
+                <li><strong>Executive Room:</strong> Elite business layout with coffee/kettle setup and organic bath cosmetics (190 sq ft).</li>
+                <li><strong>Super Deluxe Room:</strong> Ideal for pilgrim families with a King bed and expandable Sofa lounge (160 sq ft).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>Do all rooms at Hotel Advantage Inn include air conditioning and geysers?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, all our rooms feature individually controlled air conditioning, high-speed optical fiber Wi-Fi, flat-screen smart TVs, and pristine Western sanitary bathrooms with electric geysers supplying instant hot water.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>What are the standard check-in and check-out times at Hotel Advantage Inn?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Standard check-in is at 12:00 PM and check-out is at 11:00 AM. Direct bookings made on our official website unlock early check-in and late check-out privileges, subject to availability.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>Is room service and in-room dining available for guests?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, 24/7 room service and in-room dining from our in-house Golden Leaf Restaurant (serving pure vegetarian Mughlai, Awadhi, and multi-cuisine dishes) are available for all room guests.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 15: OBSIDIAN-ESPRESSO BRAND FOOTER -->
+  <footer class="footer-luxury">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon-wrapper" style="background-color: #104152;">
+            <img src="./logo_crest.webp" alt="Royal Advantage Gold Crest Icon" width="331" height="330" loading="eager">
+          </div>
+          <div class="logo-text-block">
+            <span class="logo-title" style="color: #FFFFFF;">Advantage Inn</span>
+            <span class="logo-subtitle" style="color: rgba(255,255,255,0.45);">Civil Lines Prayagraj</span>
+          </div>
+        </div>
+        <p style="color: rgba(255,255,255,0.45); font-size: 0.82rem; line-height: 1.7; margin-bottom: 1.5rem; max-width: 320px;">
+          An elegant boutique sanctuary of smart luxury comfort, designed for spiritual pilgrims, corporate advocates, and discerning families in Civil Lines, Prayagraj.
+        </p>
+        <div class="footer-socials">
+          <a href="https://wa.me/917267907111?text=Namaste%20Hotel%20Advantage%20Inn!%20I%20would%20like%20to%20send%20a%20booking%20inquiry%20for%20rooms." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="tel:+917267907111"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:hoteladvantageinn@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Navigation Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home Overview</a></li>
+          <li><a href="suites.html">Suites & Rooms</a></li>
+          <li><a href="dining.html">Golden Leaf Dine</a></li>
+          <li><a href="banquets.html">Advanta Banquets</a></li>
+          <li><a href="index.html#contact">Location & Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Attraction Guides</h4>
+        <ul class="footer-links" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem;">
+          <li><a href="sangam.html">Triveni Sangam</a></li>
+          <li><a href="anand_bhawan.html">Anand Bhawan</a></li>
+          <li><a href="fort.html">Prayagraj Fort</a></li>
+          <li><a href="high_court.html">High Court</a></li>
+          <li><a href="hanuman_mandir.html">Bade Hanuman</a></li>
+          <li><a href="khusro_bagh.html">Khusro Bagh</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Hotel Advantage Inn, Civil Lines, Prayagraj. All Rights Reserved.</p>
+      <p style="color: rgba(255,255,255,0.2);">Designed with deep care for global travelers and pilgrims.</p>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC AI CONCIERGE CHATBOT HUB -->
+  <div class="ai-concierge-trigger" id="ai-trigger" aria-label="Open AI Concierge">
+    <i class="fa-solid fa-headset"></i>
+  </div>
+
+  <div class="ai-concierge-chat" id="ai-chat">
+    <div class="chat-header">
+      <div style="display:flex; align-items:center; gap:0.8rem;">
+        <div class="chat-avatar" style="background:#FAF9F5; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#104152; font-weight:700; border:1px solid var(--border-gold-bright);">AI</div>
+        <div>
+          <h4 style="color:white; font-family:var(--font-sans); font-size:0.85rem; font-weight:700; margin:0;">Advanta Concierge</h4>
+          <span style="color:#2ecc71; font-size:0.68rem; font-weight:600; display:flex; align-items:center; gap:3px;"><span style="width:6px; height:6px; background:#2ecc71; border-radius:50%; display:inline-block;"></span> Active Direct Parity</span>
+        </div>
+      </div>
+      <button class="chat-close" id="ai-close" aria-label="Close Chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">
+        Namaste! Mapped to our premium concierge desk at Civil Lines, I can assist you with dynamic Triveni Sangam guides, direct booking rate cuts, banquet coordinates, or table bookings at Golden Leaf. How may I honor your stay?
+      </div>
+    </div>
+    <div class="chat-replies-tray">
+      <span class="quick-reply-chip" data-query="rooms">Rooms & Rates</span>
+      <span class="quick-reply-chip" data-query="dining">Golden Leaf Dine</span>
+      <span class="quick-reply-chip" data-query="wedding">Advanta Banquet</span>
+      <span class="quick-reply-chip" data-query="sangam">Triveni Sangam Guide</span>
+    </div>
+    <div class="chat-footer">
+      <input type="text" class="chat-input" id="chat-input" placeholder="Ask about rooms, guides, banquets...">
+      <button class="chat-send" id="chat-send" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- UNIVERSAL MOBILE BOTTOM APP BAR -->
+  <div class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="tel:+917267907111" class="mobile-nav-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/917267907111?text=Namaste%20Hotel%20Advantage%20Inn!%20I%20would%20like%20to%20send%20a%20booking%20inquiry%20for%20suites." class="mobile-nav-item">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="index.html#suites" class="mobile-nav-item book-now" id="mobile-nav-book-btn">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book Now</span>
+    </a>
+  </div>
+
+  <!-- Global Dynamic OTASync & Core Script binds -->
+  <script src="./ota-sync.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+</html>

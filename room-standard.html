@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://r1imghtlak.mmtcdn.com https://upload.wikimedia.org https://commons.wikimedia.org https://images.openai.com https://www.google.com https://www.google.co.in https://maps.gstatic.com https://maps.googleapis.com; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https://wa.me;">
+  <link rel="canonical" href="https://www.hoteladvantageinn.com/room-standard.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#104152">
+  <title>Deluxe Room | Smart Luxury Comfort in Civil Lines Prayagraj</title>
+  <meta name="description" content="Book Deluxe Room at Hotel Advantage Inn, Civil Lines, Prayagraj. Enjoy smart luxury, a comfortable King Bed, western bathroom with geyser, and free high-speed fiber Wi-Fi.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <style>
+    /* Cinematic Parallax Hero System */
+    .cinematic-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5rem;
+      background: linear-gradient(180deg, rgba(30, 25, 22, 0.45) 0%, rgba(30, 25, 22, 0.85) 100%), 
+                  url('https://r1imghtlak.mmtcdn.com/49939acf-d587-4006-95a4-853fdbe36f70.jpg?&output-quality=75') center/cover no-repeat fixed;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+    .hero-glass-card {
+      background: rgba(30, 25, 22, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(197, 168, 128, 0.25);
+      padding: 3rem;
+      border-radius: 12px;
+      max-width: 750px;
+      box-shadow: var(--shadow-premium);
+      transform: translateY(20px);
+      animation: slideUpHero 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hero-glass-card .spec-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      background: rgba(197, 168, 128, 0.12);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      border: 1px solid rgba(197, 168, 128, 0.3);
+    }
+    .hero-glass-card h1 {
+      font-family: var(--font-display), serif;
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+    }
+    .hero-glass-card p {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      font-family: var(--font-sans);
+    }
+    @keyframes slideUpHero {
+      to {
+        transform: translateY(0);
+      }
+    }
+    .room-detail-layout {
+      padding: 5rem 0;
+      background: var(--gradient-linen-lite);
+    }
+    .room-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+    @media(min-width: 900px) {
+      .room-grid {
+        grid-template-columns: 1.6fr 1fr;
+      }
+    }
+    /* Gallery Styles */
+    .room-gallery-container {
+      background: #FFFFFF;
+      border: 1px solid var(--border-gold-light);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium);
+      padding: 1.5rem;
+    }
+    .main-gallery-view {
+      position: relative;
+      height: 420px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .main-gallery-view img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-thumbnails {
+      display: flex;
+      gap: 0.8rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+    .gallery-thumb {
+      width: 80px;
+      height: 60px;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.7;
+      transition: var(--transition-quick);
+      flex-shrink: 0;
+    }
+    .gallery-thumb.active, .gallery-thumb:hover {
+      opacity: 1;
+      border-color: var(--color-crimson);
+    }
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Info Card */
+    .room-info-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-gold-light);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-premium);
+      height: fit-content;
+      position: sticky;
+      top: 6.5rem;
+    }
+    .specs-strip {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+    .spec-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    .spec-item i {
+      color: var(--color-gold);
+    }
+    .benefits-checklist {
+      list-style: none;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .benefits-checklist li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      line-height: 1.5;
+    }
+    .benefits-checklist li i {
+      color: var(--color-crimson);
+      margin-top: 0.2rem;
+    }
+  </style>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.hoteladvantageinn.com/#organization",
+    "name": "Hotel Advantage Inn Prayagraj",
+    "url": "https://www.hoteladvantageinn.com/",
+    "logo": "https://www.hoteladvantageinn.com/logo.webp",
+    "sameAs": [
+      "https://www.facebook.com/hoteladvantageinn",
+      "https://www.instagram.com/hoteladvantageinn"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": [
+      "Hotel",
+      "LocalBusiness"
+    ],
+    "@id": "https://www.hoteladvantageinn.com/#hotel",
+    "name": "Hotel Advantage Inn Prayagraj",
+    "description": "Smart luxury boutique hotel in Civil Lines, Prayagraj. Enjoy seamless luxury accommodations with high-speed Wi-Fi, elegant rooms, and rate parity guarantees near Prayagraj Junction.",
+    "url": "https://www.hoteladvantageinn.com/",
+    "logo": "https://www.hoteladvantageinn.com/logo.webp",
+    "image": "https://www.hoteladvantageinn.com/hotel_front.webp",
+    "telephone": "+91-7267907111",
+    "priceRange": "INR 2499 - 7499",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
+    "starRating": {
+      "@type": "Rating",
+      "ratingValue": "4.8",
+      "bestRating": "5"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1-A, Loyal Road, (Patrika Marg), Behind BSNL Office, Civil Lines",
+      "addressLocality": "Prayagraj",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "211001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.4542",
+      "longitude": "81.8340"
+    },
+    "sameAs": [
+      "https://www.facebook.com/hoteladvantageinn",
+      "https://www.instagram.com/hoteladvantageinn",
+      "https://www.tripadvisor.com/Hotel_Review-g297684-d25439401-Reviews-Hotel_Advantage_Inn-Prayagraj_Allahabad_District_Uttar_Pradesh.html",
+      "https://www.booking.com/hotel/in/advantage-inn-prayagraj.html",
+      "https://www.makemytrip.com/hotels/hotel_advantage_inn-details-prayagraj.html"
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "@id": "https://www.hoteladvantageinn.com/#organization"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free High-Speed Fiber Wi-Fi",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Multi-Cuisine Dining at Golden Leaf",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Secured Private Parking",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Elevator Access",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "24/7 Security",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HotelRoom",
+    "@id": "https://www.hoteladvantageinn.com/room-standard.html#room",
+    "name": "Deluxe Room",
+    "description": "Our highly refined entry-tier premium double room, thoughtfully engineered to provide an oasis of peaceful solitude and smart utility in Civil Lines, Prayagraj.",
+    "bed": {
+      "@type": "BedDetails",
+      "numberOfBeds": 1,
+      "typeOfBed": "King Bed"
+    },
+    "occupancy": {
+      "@type": "QuantitativeValue",
+      "maxValue": 3,
+      "unitCode": "C62"
+    },
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 130,
+      "unitCode": "FTK"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "2499.00",
+      "priceCurrency": "INR"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Individually Controlled A/C",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free High-Speed Fiber Wi-Fi",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Smart TV",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Electric Kettle with Tea/Coffee Maker",
+        "value": "true"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Western Bathroom with Electric Geyser",
+        "value": "true"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.hoteladvantageinn.com/room-standard.html#webpage",
+    "url": "https://www.hoteladvantageinn.com/room-standard.html",
+    "name": "Deluxe Room | Hotel Advantage Inn Prayagraj",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.hoteladvantageinn.com/#website"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.hoteladvantageinn.com/room-standard.html#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.hoteladvantageinn.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Suites & Rooms",
+        "item": "https://www.hoteladvantageinn.com/suites.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Deluxe Room",
+        "item": "https://www.hoteladvantageinn.com/room-standard.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the check-in and check-out times for the Deluxe Room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard check-in is at 12:00 PM and check-out is at 11:00 AM. Direct bookings on our official website unlock early check-in and late check-out privileges, subject to availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What premium amenities are included in the Deluxe Room?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Deluxe Room features a comfortable King-size orthopaedic mattress with pure cotton linens, individual air conditioning, free high-speed fiber Wi-Fi, a flat-screen smart TV, a multi-socket study desk, an electric kettle with a coffee/tea set, and a western sanitary bathroom with a dedicated electric geyser for hot water."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the hotel provide parking and lift access for Deluxe Room guests?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all guests enjoy complimentary access to our secured private parking with 24/7 CCTV surveillance, a modern passenger lift (elevator) servicing all floors, and full silent automatic power generator backup."
+        }
+      }
+    ]
+  }
+]
+</script>
+
+  <!-- Search Engine, Social Share & AI Browser Preview Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hoteladvantageinn.com/room-standard.html">
+  <meta property="og:title" content="Deluxe Room | Smart Luxury Comfort in Civil Lines Prayagraj">
+  <meta property="og:description" content="Book Deluxe Room at Hotel Advantage Inn, Civil Lines, Prayagraj. Enjoy smart luxury, a comfortable King Bed, western bathroom with geyser, and free high-speed fiber Wi-Fi.">
+  <meta property="og:image" content="https://www.hoteladvantageinn.com/room_deluxe.webp">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.hoteladvantageinn.com/room-standard.html">
+  <meta property="twitter:title" content="Deluxe Room | Smart Luxury Comfort in Civil Lines Prayagraj">
+  <meta property="twitter:description" content="Book Deluxe Room at Hotel Advantage Inn, Civil Lines, Prayagraj. Enjoy smart luxury, a comfortable King Bed, western bathroom with geyser, and free high-speed fiber Wi-Fi.">
+  <meta property="twitter:image" content="https://www.hoteladvantageinn.com/room_deluxe.webp">
+</head>
+<body style="background-color: #FAF9F5;">
+
+  <!-- OFFICIAL GLOBAL STICKY HEADER -->
+  <header class="sticky-nav scrolled" style="position: fixed; background: var(--bg-glass-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon-wrapper" style="background: #104152; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-gold-bright); box-shadow: var(--shadow-glass);">
+          <img src="./logo_crest.webp" alt="Hotel Advantage Inn Logo" style="height: 32px; width: 32px; object-fit: contain;" width="331" height="330" loading="eager">
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title" style="color: #FFFFFF;">Advantage Inn</span>
+          <span class="logo-subtitle" style="color: var(--color-gold);">Civil Lines Prayagraj</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Home</a></li>
+          <li><a href="suites.html" class="nav-link" style="color: var(--color-gold);">Suites & Rooms</a></li>
+          <li><a href="amenities.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Amenities</a></li>
+          <li><a href="dining.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Dining</a></li>
+          <li><a href="banquets.html" class="nav-link" style="color: rgba(255,255,255,0.85);">Banquets</a></li>
+          <li><a href="index.html#suites" class="btn btn-primary" style="padding: 0.5rem 1.6rem; font-size: 0.68rem; border-radius: 50px;">Book Direct</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggler" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-drawer">
+    <button class="close-btn" aria-label="Close Menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">The Concept</a></li>
+      <li><a href="suites.html">Suites & Rooms</a></li>
+      <li><a href="amenities.html">Amenities</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="banquets.html">Banquets & Weddings</a></li>
+      <li><a href="index.html#contact">Location & Directions</a></li>
+    </ul>
+    <a href="index.html#suites" class="btn btn-secondary" style="margin-top: 2rem; width: 100%;">Reserve Direct & Save</a>
+  </div>
+
+  <!-- LUXURY CINEMATIC HERO SECTION -->
+  <section class="cinematic-hero">
+    <div class="container">
+      <div class="hero-glass-card">
+        <span class="spec-badge">Entry Deluxe Tier</span>
+        <h1>Deluxe Room</h1>
+        <p>A beautifully curated entry-tier premium double sanctuary blending minimalist elegance with essential luxury, complete behind the BSNL Office in the heart of Civil Lines, Prayagraj.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL MAIN CONTENT -->
+  <main class="room-detail-layout">
+    <div class="container">
+      <div class="room-grid">
+        
+        <!-- Left Side: Gallery & Description -->
+        <div>
+          <div class="room-gallery-container">
+            <div class="main-gallery-view">
+              <img id="main-view" src="https://r1imghtlak.mmtcdn.com/49939acf-d587-4006-95a4-853fdbe36f70.jpg?&output-quality=75" alt="Deluxe Room Suite Bedding View" loading="lazy">
+            </div>
+            <div class="gallery-thumbnails">
+              <div class="gallery-thumb active" onclick="updateView(this, 'https://r1imghtlak.mmtcdn.com/49939acf-d587-4006-95a4-853fdbe36f70.jpg?&output-quality=75')">
+                <img src="https://r1imghtlak.mmtcdn.com/49939acf-d587-4006-95a4-853fdbe36f70.jpg?&output-quality=75" alt="Deluxe Room Bedding" loading="lazy">
+              </div>
+              <div class="gallery-thumb" onclick="updateView(this, 'https://r1imghtlak.mmtcdn.com/f6342612-0fd3-45ba-9160-210509e1155f.jpg?&output-quality=75')">
+                <img src="https://r1imghtlak.mmtcdn.com/f6342612-0fd3-45ba-9160-210509e1155f.jpg?&output-quality=75" alt="Deluxe Room Toilet" loading="lazy">
+              </div>
+              <div class="gallery-thumb" onclick="updateView(this, 'https://r1imghtlak.mmtcdn.com/a536cb99-c1e3-4158-aec0-711d7d0533c3.jpg?&output-quality=75')">
+                <img src="https://r1imghtlak.mmtcdn.com/a536cb99-c1e3-4158-aec0-711d7d0533c3.jpg?&output-quality=75" alt="Deluxe Room Work Desk" loading="lazy">
+              </div>
+              <div class="gallery-thumb" onclick="updateView(this, 'https://r1imghtlak.mmtcdn.com/316d4b67-4e24-4404-bbf0-819d668223c9.jpg?&output-quality=75')">
+                <img src="https://r1imghtlak.mmtcdn.com/316d4b67-4e24-4404-bbf0-819d668223c9.jpg?&output-quality=75" alt="Deluxe Room Lighting" loading="lazy">
+              </div>
+              <div class="gallery-thumb" onclick="updateView(this, 'https://r1imghtlak.mmtcdn.com/cfba677c-38e2-4c94-a556-b137ccc59818.jpg?&output-quality=75')">
+                <img src="https://r1imghtlak.mmtcdn.com/cfba677c-38e2-4c94-a556-b137ccc59818.jpg?&output-quality=75" alt="Deluxe Room Seating" loading="lazy">
+              </div>
+              <div class="gallery-thumb" onclick="updateView(this, 'https://r1imghtlak.mmtcdn.com/b4ca4a9e-756e-4fcd-ac2a-62da7f8329f1.jpg?&output-quality=75')">
+                <img src="https://r1imghtlak.mmtcdn.com/b4ca4a9e-756e-4fcd-ac2a-62da7f8329f1.jpg?&output-quality=75" alt="Deluxe Room Styling" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#FFFFFF; border-radius:12px; border:1px solid var(--border-gold-light); padding:2.5rem; margin-top:2rem; box-shadow:var(--shadow-premium);">
+            <h3 style="font-family:var(--font-display), serif; font-size:1.8rem; margin-bottom:1.2rem; color:var(--text-dark);">Description & Sanctuary Experience</h3>
+            <p style="font-size:0.95rem; line-height:1.7; color:var(--text-muted); margin-bottom:1.5rem;">
+              The <strong>Deluxe Room</strong> is our highly refined entry-tier premium double room, thoughtfully engineered to provide an oasis of peaceful solitude and smart utility in the center of Civil Lines, Prayagraj. Located inside a quiet perimeter behind the BSNL Office on Patrika Marg, this room offers soundproofed street views and instant access to our modern passenger elevator (lift).
+            </p>
+            <p style="font-size:0.95rem; line-height:1.7; color:var(--text-muted); margin-bottom:1.5rem;">
+              Every Deluxe Room features an ultra-comfortable double orthopaedic mattress with pure cotton linens designed to guarantee peaceful sleep for business executives and spiritual pilgrims. The room features complete individual air conditioning settings, free high-speed fiber Wi-Fi, a multi-socket wooden study desk, a flat-screen smart TV preloaded with international satellite connections, and a pristine western sanitary geyser bathroom with complimentary botanical soaps.
+            </p>
+            
+            <h4 style="font-family:var(--font-sans); font-size:1.05rem; font-weight:700; color:var(--text-dark); margin:2rem 0 1rem 0;">Room Amenities & Facilities</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; font-size:0.88rem; color:var(--text-dark);">
+              <div><i class="fa-solid fa-snowflake" style="color:var(--color-gold); margin-right:8px;"></i> Full Air Conditioning</div>
+              <div><i class="fa-solid fa-wifi" style="color:var(--color-gold); margin-right:8px;"></i> Free Optical Fiber Wi-Fi</div>
+              <div><i class="fa-solid fa-tv" style="color:var(--color-gold); margin-right:8px;"></i> 32" Smart TV</div>
+              <div><i class="fa-solid fa-mug-hot" style="color:var(--color-gold); margin-right:8px;"></i> Electric Kettle Set</div>
+              <div><i class="fa-solid fa-temperature-high" style="color:var(--color-gold); margin-right:8px;"></i> Western Geyser Bathroom</div>
+              <div><i class="fa-solid fa-elevator" style="color:var(--color-gold); margin-right:8px;"></i> Passenger Elevator Access</div>
+              <div><i class="fa-solid fa-square-parking" style="color:var(--color-gold); margin-right:8px;"></i> Gated Private Parking (CCTV)</div>
+              <div><i class="fa-solid fa-bolt-lightning" style="color:var(--color-gold); margin-right:8px;"></i> 24/7 Power Backup</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Sticky Info & Pre-filled Booking CTA -->
+        <div>
+          <div class="room-info-card">
+            <span class="spec-badge" style="color: var(--color-crimson); background: var(--bg-secondary); border: 1px solid var(--border-gold-light); font-size: 0.68rem; font-weight:700; padding:0.3rem 0.8rem; border-radius:50px; display:inline-block; margin-bottom:1rem; letter-spacing:0.1em;">ENTRY PREMIUM</span>
+            <h2 class="room-info-title">Deluxe Room</h2>
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.5rem;">
+              Smartly appointed double-occupancy luxury layout offering elite convenience for corporate transit or pilgrimage tours.
+            </p>
+            
+            <div class="specs-strip">
+              <div class="spec-item"><i class="fa-solid fa-expand"></i> 130 SQ FT</div>
+              <div class="spec-item"><i class="fa-solid fa-bed"></i> KING BED</div>
+              <div class="spec-item"><i class="fa-solid fa-user-group"></i> UP TO 3 GUESTS</div>
+            </div>
+
+            <h3 style="font-size:1.6rem; color:var(--color-crimson); font-family:var(--font-btn); font-weight:700; margin-bottom:1.5rem;">
+              ₹2,499 <span style="font-size:0.8rem; font-weight:500; color:var(--text-muted);">/ Night + GST</span>
+            </h3>
+
+            <a href="index.html#suites" class="btn btn-secondary" onclick="prefillStandard()" style="width: 100%; text-align: center; height:50px; display:flex; align-items:center; justify-content:center; font-weight:700;">Book Deluxe Room Now</a>
+            
+            <ul class="benefits-checklist">
+              <li><i class="fa-solid fa-circle-check"></i> Free High-Speed Optical Fiber Wi-Fi</li>
+              <li><i class="fa-solid fa-circle-check"></i> Rate Parity Savings (DIRECT10 promo ready)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Elevator (Lift) and Secured Parking CCTV</li>
+              <li><i class="fa-solid fa-circle-check"></i> In-Room Kettle Coffee & Wake-up Services</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+  <!-- SECTION 14: STRATEGIC LOCAL SEO FAQ -->
+  <section class="container faq-section-wrapper" id="faqs" style="padding: 5rem 0;">
+    <h3 style="font-family: var(--font-display), serif; font-size: 2.2rem; text-align: center; margin-bottom: 1rem; color: var(--text-dark);">Deluxe Room Q&A</h3>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 3.5rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem;">
+      Verified lodging information for spiritual pilgrims, corporate transits, and leisure groups booking direct in Civil Lines, Prayagraj.
+    </p>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-accordion">
+        
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>What are the check-in and check-out times for the Deluxe Room?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Standard check-in is at 12:00 PM and check-out is at 11:00 AM. Direct bookings on our official website unlock early check-in and late check-out privileges, subject to availability.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>What premium amenities are included in the Deluxe Room?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              The Deluxe Room features a comfortable King-size orthopaedic mattress with pure cotton linens, individual air conditioning, free high-speed fiber Wi-Fi, a flat-screen smart TV, a multi-socket study desk, an electric kettle with a coffee/tea set, and a western sanitary bathroom with a dedicated electric geyser for hot water.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-fade-up">
+          <div class="faq-question">
+            <h4>Does the hotel provide parking and lift access for Deluxe Room guests?</h4>
+            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, all guests enjoy complimentary access to our secured private parking with 24/7 CCTV surveillance, a modern passenger lift (elevator) servicing all floors, and full silent automatic power generator backup.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+</main>
+
+  <!-- OFFICIAL HIGH-END BRAND FOOTER -->
+  <footer class="footer-luxury" style="background-color: #120e0c; color: #FFFFFF; padding: 5rem 0 2rem; border-top: 1px solid var(--border-gold-light);">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="logo" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
+            <div class="logo-icon-wrapper" style="background: #104152; display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-gold-bright);">
+              <img src="./logo_crest.webp" alt="Hotel Advantage Inn Crest Logo" style="height: 26px; width: 26px; object-fit: contain;" width="331" height="330" loading="eager">
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-title" style="color: #FFFFFF; font-weight: 700; font-family: var(--font-sans); font-size: 1.15rem; letter-spacing: 0.05em;">Advantage Inn</span>
+              <span class="logo-subtitle" style="color: var(--color-gold); font-size: 0.72rem; display: block; text-transform: uppercase;">Civil Lines</span>
+            </div>
+          </a>
+          <p style="font-size: 0.85rem; line-height: 1.8; color: rgba(255,255,255,0.75);">
+            Experience the <strong>best luxury hotel in Civil Lines Prayagraj near the Junction railway station</strong>. Hotel Advantage Inn offers premium rooms with passenger lift access, secured private parking, and signature Awadhi dining at Golden Leaf.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h4 style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-gold); margin-bottom: 1.8rem;">Explore Sanctuary</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li><a href="index.html#about" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: var(--transition-quick);">The Concept</a></li>
+            <li><a href="suites.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: var(--transition-quick);">Suites & Rooms</a></li>
+            <li><a href="dining.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: var(--transition-quick);">Golden Leaf Dine</a></li>
+            <li><a href="amenities.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: var(--transition-quick);">Direct Privileges</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-gold); margin-bottom: 1.8rem;">Local Coordinates</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li><a href="index.html#contact" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem;">Civil Lines (0 km)</a></li>
+            <li><a href="index.html#contact" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem;">Prayagraj Junction (1.2 km)</a></li>
+            <li><a href="sangam.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem;">Triveni Sangam (7.5 km)</a></li>
+            <li><a href="index.html#faqs" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem;">FAQ Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.5);">
+        <p>&copy; 2026 Hotel Advantage Inn, Prayagraj. All rights reserved. Managed commission-free.</p>
+        <p>
+          <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; margin-right: 1rem;">Privacy Policy</a>
+          <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none;">Booking Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM STICKY NAVIGATION BAR -->
+  <div class="mobile-bottom-nav">
+    <a href="tel:+917267907111" class="mobile-nav-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/917267907111?text=I%20would%20like%20to%20inquire%20about%20booking%20a%20sanctuary%20room%20at%20Advantage%20Inn" target="_blank" class="mobile-nav-item" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://maps.google.com/?q=Hotel+Advantage+Inn+Prayagraj" target="_blank" class="mobile-nav-item" rel="noopener noreferrer">
+      <i class="fa-solid fa-location-arrow"></i>
+      <span>Directions</span>
+    </a>
+    <a href="index.html#suites" class="mobile-nav-item book-now" id="mobile-nav-book-btn">
+      <i class="fa-solid fa-bed"></i>
+      <span>Book Now</span>
+    </a>
+  </div>
+
+  <script>
+    function updateView(thumbnail, imageUrl) {
+      document.getElementById('main-view').src = imageUrl;
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      thumbnail.classList.add('active');
+    }
+    
+    function prefillStandard() {
+      sessionStorage.setItem('prefillRoom', 'standard');
+    }
+  </script>
+  <script src="./ota-sync.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Robots.txt for Hotel Advantage Inn, Prayagraj
+
+User-agent: *
+Allow: /
+Disallow: /booking-error
+Disallow: /api/
+
+Sitemap: https://www.hoteladvantageinn.com/sitemap.xml
