@@ -590,13 +590,71 @@ document.addEventListener('DOMContentLoaded', () => {
   if (banquetForm) {
     banquetForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('banquet-name').value;
-      const phone = document.getElementById('banquet-phone').value;
-      const type = document.getElementById('banquet-event-type').value;
       
-      console.log("[Banquet Inquiry Submission]:", { name, phone, type });
-      alert(`Thank you, ${name}! Your inquiry for a grand ${type} banquet has been received. Our event coordinator will connect with you within 2 hours.`);
-      banquetForm.reset();
+      const nameInput = document.getElementById('banquet-name');
+      const phoneInput = document.getElementById('banquet-phone');
+      const typeInput = document.getElementById('banquet-event-type');
+      const guestsInput = document.getElementById('banquet-guests');
+      
+      const name = nameInput ? nameInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const type = typeInput ? typeInput.value : '';
+      const guests = guestsInput ? guestsInput.value : '';
+      
+      // Validation
+      if (!name || !phone || !type || !guests) {
+        alert("Please fill in all required fields to submit your banquet inquiry.");
+        return;
+      }
+      
+      // Disable submit button to prevent duplicate submissions
+      const submitBtn = banquetForm.querySelector('button[type="submit"]');
+      let originalBtnText = "Submit Event Request";
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
+      }
+      
+      // Format messages
+      const whatsappText = `Namaste Hotel Advantage Inn!\n\nI would like to submit a Banquet / Event inquiry from the official website. Below are my event details:\n\n` +
+        `*Name:* ${name}\n` +
+        `*Phone Number:* ${phone}\n` +
+        `*Event Theme:* ${type}\n` +
+        `*Estimated Guests:* ${guests} Guests\n\n` +
+        `Please share availability and catering packages.`;
+        
+      const emailSubject = `Banquet Booking Inquiry | Hotel Advantage Inn`;
+      const emailBody = `Namaste Hotel Advantage Inn Events Team,\n\n` +
+        `I would like to submit a Banquet / Event inquiry from the official website. Below are my event details:\n\n` +
+        `-----------------------------------------\n` +
+        `- Guest Name: ${name}\n` +
+        `- Contact Phone: ${phone}\n` +
+        `- Event Theme: ${type}\n` +
+        `- Estimated Guests: ${guests} Guests\n` +
+        `-----------------------------------------\n\n` +
+        `Please verify venue availability for these details and contact me directly on phone or WhatsApp to share catalog pricing and catering packages.\n\n` +
+        `Warm regards,\n${name}`;
+        
+      const whatsappLink = `https://wa.me/917267907111?text=${encodeURIComponent(whatsappText)}`;
+      const mailtoLink = `mailto:hoteladvantageinn@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Step 1: Open WhatsApp draft first (user-initiated click event allows window.open without blocker)
+      window.open(whatsappLink, '_blank');
+      
+      // Step 2: Open Email draft after a short delay (using window.location.href, which is safe from popup blockers)
+      setTimeout(() => {
+        window.location.href = mailtoLink;
+      }, 1000);
+      
+      // Step 3: Reset form & restore submit button after redirect completion
+      setTimeout(() => {
+        banquetForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      }, 2500);
     });
   }
 
