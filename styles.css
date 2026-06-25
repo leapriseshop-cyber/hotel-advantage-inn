@@ -1476,7 +1476,10 @@ header.sticky-nav.scrolled .nav-link {
 }
 
 .attraction-card {
+  display: block;
   position: relative;
+  text-decoration: none;
+  color: inherit;
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 3/4;
