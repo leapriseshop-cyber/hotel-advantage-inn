@@ -2360,6 +2360,9 @@ footer {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto; /* Enable vertical scroll if modal contents exceed height */
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
 }
 
 .booking-overlay.open {
@@ -2375,6 +2378,30 @@ footer {
   border: 1px solid var(--border-gold-bright);
   border-radius: 8px;
   box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+  margin: auto; /* Keep modal centered within the scrollable container */
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for modal on small height/width devices */
+@media(max-height: 720px), (max-width: 599px) {
+  .booking-overlay {
+    align-items: flex-start; /* Prevent top cutoff when scrolling is active */
+  }
+  .booking-modal {
+    padding: 1.5rem 1.2rem !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .booking-modal .modal-header {
+    margin-bottom: 1.2rem !important;
+  }
+  .booking-modal .direct-benefit-badge {
+    margin-bottom: 1.2rem !important;
+    padding: 0.6rem 0.8rem !important;
+  }
+  .booking-modal .input-group {
+    margin-bottom: 0.8rem !important;
+  }
 }
 
 .modal-header {
@@ -3373,7 +3400,11 @@ footer {
   }
   .booking-bar button {
     height: 36px !important;
-    font-size: 0.78rem !important;
+    min-height: auto !important;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.05em !important;
+    padding: 0 0.4rem !important;
+    border-radius: 4px !important;
     margin-top: 0 !important;
     align-self: flex-end !important; /* Perfect vertical alignment with input fields on row 3 */
     box-sizing: border-box !important;
