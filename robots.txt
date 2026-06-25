@@ -5,4 +5,4 @@ Allow: /
 Disallow: /booking-error
 Disallow: /api/
 
-Sitemap: https://www.hoteladvantageinn.com/sitemap.xml
+Sitemap: https://hoteladvantageinn.com/sitemap.xml
