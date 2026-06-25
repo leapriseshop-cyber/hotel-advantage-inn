@@ -364,14 +364,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const guestsVal = modalGuests.value;
       const confId = "AI-" + Math.floor(100000 + Math.random() * 900000);
 
+      // Map selected values to user-friendly display names
+      const roomNames = {
+        standard: 'Deluxe Room',
+        premium: 'Executive Room',
+        family: 'Super Deluxe Room'
+      };
+      const roomDisplayName = roomNames[roomSelected] || (roomSelected.charAt(0).toUpperCase() + roomSelected.slice(1));
+
       // Create a highly professional, pre-filled email draft
-      const emailSubject = `Room Reservation Inquiry: ${roomSelected.toUpperCase()} Sanctuary - ${name}`;
+      const emailSubject = `Room Reservation Inquiry: ${roomDisplayName} - ${name}`;
       const emailBody = `Namaste Hotel Advantage Inn Reservations Team,\n\nI would like to submit a direct room reservation inquiry from the official website. Below are my travel details:\n\n` +
         `-----------------------------------------\n` +
         `- Guest Full Name: ${name}\n` +
         `- Contact Phone: ${phone}\n` +
         `- Email Address: ${email}\n` +
-        `- Selected Room Category: ${roomSelected.toUpperCase()} Sanctuary Suite\n` +
+        `- Selected Room Category: ${roomDisplayName}\n` +
         `- Check-In Date: ${checkInVal}\n` +
         `- Check-Out Date: ${checkOutVal}\n` +
         `- Total Guests: ${guestsVal} Guest(s)\n` +
@@ -888,12 +896,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval = null;
     const transitionDuration = 3000; // 3 seconds transition interval
     
+    function loadSlideImage(slide) {
+      const lazyImages = slide.querySelectorAll('.slide-image[data-bg]');
+      lazyImages.forEach(img => {
+        const bg = img.getAttribute('data-bg');
+        if (bg) {
+          img.style.backgroundImage = bg;
+          img.removeAttribute('data-bg');
+        }
+      });
+    }
+
     function showSlide(index) {
       if (index < 0) {
         index = totalSlides - 1;
       } else if (index >= totalSlides) {
         index = 0;
       }
+      
+      const newSlide = slides[index];
+      loadSlideImage(newSlide);
       
       // Deactivate current slide
       slides[currentSlideIndex].classList.remove('active');
@@ -906,6 +928,13 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[currentSlideIndex].classList.add('active');
       dots[currentSlideIndex].classList.add('active');
     }
+
+    // Preload remaining slides after page load is fully complete (non-blocking)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        slides.forEach(slide => loadSlideImage(slide));
+      }, 500); // 500ms delay to make sure UI is fully idle
+    });
     
     function nextSlide() {
       showSlide(currentSlideIndex + 1);
